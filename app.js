@@ -16,7 +16,9 @@ const vm = Vue.createApp({
     increment() {
       this.age++;
     },
-    updateLastName(e) {
+    updateLastName(msg, e) {
+      e.preventDefault()
+      console.log(msg)
       this.lastName = e.target.value;
     },
   },
