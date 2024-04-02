@@ -2,6 +2,7 @@ const vm = Vue.createApp({
   data() {
     return {
       firstName: "John",
+      // middleName: "",
       lastName: "Doe",
       url: "https://google.com",
       raw_url: '<a href="https://google.com" target="_blank">Google</a>',
@@ -13,13 +14,16 @@ const vm = Vue.createApp({
     fullName() {
       return `${this.firstName} ${this.lastName.toUpperCase()}`;
     },
+    // udpdateMiddleName(e) {
+    //   this.middleName = e.target.value;
+    // },
+    updateLastName(msg, e) {
+      // e.preventDefault()
+      console.log(msg);
+      this.lastName = e.target.value;
+    },
     increment() {
       this.age++;
-    },
-    updateLastName(msg, e) {
-      e.preventDefault()
-      console.log(msg)
-      this.lastName = e.target.value;
     },
   },
   computed: {
