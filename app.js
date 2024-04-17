@@ -9,7 +9,7 @@ const vm = Vue.createApp({
       age: "20",
       message: "Hello Vue!",
     };
-  },
+  },  
   methods: {
     updateLastName(msg, e) {
       // e.preventDefault()
@@ -27,8 +27,6 @@ const vm = Vue.createApp({
     addToMessage() {
       return `${this.message} is a great framework to learn`;
     },
-  },
-  computed: {
     fullName() {
       console.log("Full name computed property was called!");
       return `${this.firstName} ${
