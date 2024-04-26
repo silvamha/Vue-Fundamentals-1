@@ -14,20 +14,28 @@
       <p v-html="raw_url"></p>
       <p>{{ typeof age }}</p>
       <hr />
-      <label for="">First Name</label>
-      <input type="text" v-model.lazy.trim="firstName" />
+      <label>First Name
+             <input type="text" v-model.lazy.trim="firstName" /> 
+      </label>
 
-      <label for="">Middle Name</label>
-      <input type="text" @keyup.enter="updateMiddleName" />
 
-      <label for="">Last Name</label>
-      <input
+      <label>Middle Name
+           <input type="text" @keyup.enter="updateMiddleName" />   
+      </label>
+
+
+      <label>Last Name
+            <input
         type="text"
         :value="lastName"
         @input.prevent="updateLastName('Last name event triggered!', $event)"
-      />
-      <label>Age</label>
-      <input type="number" v-model.number="age" />
+      />  
+      </label>
+
+      <label>Age
+             <input type="number" v-model.number="age" /> 
+      </label>
+
 
       <button @click="increment">Increment</button>
       <button @click="age--">Decrement</button>

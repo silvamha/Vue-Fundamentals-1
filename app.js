@@ -12,7 +12,7 @@ const vm = Vue.createApp({
   },
   methods: {
     updateLastName(msg, e) {
-      // e.preventDefault()
+      e.preventDefault()
       console.log(msg);
       this.lastName = e.target.value;
     },
