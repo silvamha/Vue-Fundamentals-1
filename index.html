@@ -14,28 +14,29 @@
       <p v-html="raw_url"></p>
       <p>{{ typeof age }}</p>
       <hr />
-      <label>First Name
-             <input type="text" v-model.lazy.trim="firstName" /> 
+      <label
+        >First Name
+        <input type="text" v-model.lazy.trim="firstName" />
       </label>
 
-
-      <label>Middle Name
-           <input type="text" @keyup.enter="updateMiddleName" />   
+      <label
+        >Middle Name
+        <input type="text" @keyup.enter="updateMiddleName" />
       </label>
 
-
-      <label>Last Name
-            <input
-        type="text"
-        :value="lastName"
-        @input.prevent="updateLastName('Last name event triggered!', $event)"
-      />  
+      <label
+        >Last Name
+        <input
+          type="text"
+          :value="lastName"
+          @input.prevent="updateLastName('Last name event triggered!', $event)"
+        />
       </label>
 
-      <label>Age
-             <input type="number" v-model.number="age" /> 
+      <label
+        >Age
+        <input type="number" v-model.number="age" />
       </label>
-
 
       <button @click="increment">Increment</button>
       <button @click="age--">Decrement</button>
@@ -52,6 +53,9 @@
           >Disabled item</a
         >
       </ul>
+      <div>
+        <p>{{ age }}</p>
+      </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>

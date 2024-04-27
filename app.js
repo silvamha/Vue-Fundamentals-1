@@ -12,7 +12,7 @@ const vm = Vue.createApp({
   },
   methods: {
     updateLastName(msg, e) {
-      e.preventDefault()
+      // e.preventDefault()
       console.log(msg);
       this.lastName = e.target.value;
     },
@@ -46,5 +46,3 @@ const vm = Vue.createApp({
 // setTimeout(() => {
 //   vm.firstName = "Bob";
 // }, 2000);
-
-
